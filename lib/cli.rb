@@ -1,8 +1,9 @@
 class Cli
-    @@category = ["Age of Apocalypse", "Acts of Vengeance!", "Dark Reign", "Days of Future Present"]
+    @@category = ["Villian", "Hero", "God", "Devil"]
     def start
         puts "Salutations True Believer!"
-        puts "CHOOSE YOUR DESTINY"
+        puts "I am Uatu the Watcher"
+        puts "CHOOSE YOUR REPRESENTATION"
         self.display_category
         input = gets.chomp
         index = input_to_index(input)
@@ -38,5 +39,3 @@ end
         Cli.category.each_with_index{|category, index| puts"#{index+1}. #{category}"}
     end
 end
-
-

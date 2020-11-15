@@ -20,7 +20,7 @@ class Api
         #binding.pry
         response = Net::HTTP.get(uri)
         articles = JSON.parse(response)
-        articles["data"]["results"][1..6]
+        articles["data"]["results"][1..11]
     end
 
     def create_articles
