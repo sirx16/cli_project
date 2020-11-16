@@ -13,7 +13,7 @@
         @@all = []
     end
     def self.display_articles
-        puts "Choose Your Reality:(1-6)"
+        puts "Choose Your Reality:(1-11)"
         self.all.each_with_index{|article, index| puts "#{index + 1}. #{article.data}"}
         #binding.pry
     end

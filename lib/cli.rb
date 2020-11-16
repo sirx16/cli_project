@@ -1,6 +1,6 @@
 class Cli
     @@category = ["Villian", "Hero", "God", "Devil"]
-    def start
+    def harken
         puts "Salutations True Believer!"
         puts "I am Uatu the Watcher"
         puts "CHOOSE YOUR REPRESENTATION"
@@ -28,7 +28,7 @@ class Cli
         index = input_to_index(input)
         if index == 0
             Article.clear_all
-            self.start
+            self.harken
         end
 end
     def self.category
