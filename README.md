@@ -8,7 +8,6 @@ To install:
 gem pry
 gem httparty
 gem json
-gem launchy
 Usage
 To execute this CLI, type ruby bin/run into the terminal. You will be prompted immediately by Uatu the Watcher. Follow along with the prompts to see book titles by author and learn detailed information about specific books.
 Contributing

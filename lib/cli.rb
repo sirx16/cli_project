@@ -1,5 +1,9 @@
 class Cli
     @@category = ["Villian", "Hero", "God", "Devil"]
+
+    #This is the method that starts telling the program what to do.
+    #The self.display_category in harken method is there so the application calls on it to input the information 
+    #on category right after the user sees the message
     def harken
         puts "Salutations True Believer!"
         puts "I am Uatu the Watcher"
@@ -16,10 +20,14 @@ class Cli
         Article.display_article(index)
         self.another_article?
         #binding.pry
+        #self tells the method to stay in its class
+        
     end
+        #grabs the users input and stores it before passing it to the method
     def input_to_index(input)
         input.to_i - 1
     end
+
     def another_article?
         puts "Would you like to enter another reality?"
         puts "1. Yea"
@@ -29,8 +37,16 @@ class Cli
         if index == 0
             Article.clear_all
             self.harken
+        else index == 1
+            goodbye
         end
-end
+    end
+
+    def goodbye
+        puts "You have conquered the battle! Til we meet again...."
+        exit
+    end
+
     def self.category
         @@category
     end
@@ -39,3 +55,5 @@ end
         Cli.category.each_with_index{|category, index| puts"#{index+1}. #{category}"}
     end
 end
+#In Ruby, a method provides functionality to an Object. A class method provides functionality to a class itself, 
+#while an instance method provides functionality to one instance of a class.

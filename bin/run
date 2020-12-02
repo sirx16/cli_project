@@ -1,6 +1,8 @@
 #! /usr/bin/env ruby
+#this tells my program that I am using RUBY
 
 require_relative '../environment.rb'
-
+#This starts my program.
 cli = Cli.new
 cli.harken
+
