@@ -14,6 +14,7 @@ class Cli
         query = Cli.category[index]
         api = Api.new(query)
         api.create_articles
+        
         Article.display_articles
         input = gets.chomp
         index = input_to_index(input)
@@ -24,22 +25,43 @@ class Cli
         
     end
         #grabs the users input and stores it before passing it to the method
+
+        
     def input_to_index(input)
         input.to_i - 1
     end
+
+    # def comics(index)
+    #     index == 2
+    #     self.comics(index)
+    #             article = self.comics[index]
+    #             puts "#{article.data} -- #{article.results}"
+    # end
+        
 
     def another_article?
         puts "Would you like to enter another reality?"
         puts "1. Yea"
         puts "2. Nay"
+        puts "3. See which you've submitted to"
         input = gets.chomp
         index = input_to_index(input)
         if index == 0
             Article.clear_all
             self.harken
-        else index == 1
+        elsif index == 2
+             self.comics(index)
+                article = self.comics[index]
+                puts "#{article.data} -- #{article.results}"
+        elsif index == 1
             goodbye
         end
+    end
+#binding.pry
+    def save_input
+        input = gets.chomp
+        index = input.to_i - 1
+        @@comics << article
     end
 
     def goodbye

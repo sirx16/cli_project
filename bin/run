@@ -3,6 +3,6 @@
 
 require_relative '../environment.rb'
 #This starts my program.
-cli = Cli.new
+cli = Cli.new #new Instance of Cli iniated
 cli.harken
 

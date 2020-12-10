@@ -30,7 +30,10 @@ class Api
         self.fetch_article{|article| Article.new(article["resourceURI"])}
 
 
-    end        
+    end       
+    def comics
+        @@comics
+    end 
 
 end
 
