@@ -31,9 +31,9 @@ class Api
 
 
     end       
-    def comics
-        @@comics
-    end 
+    # def comics
+    #     @@comics
+    # end 
 
 end
 
